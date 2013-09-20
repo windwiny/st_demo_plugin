@@ -1,0 +1,19 @@
+[
+	 {
+	 "id": "tools",
+	 "children":
+		 [
+			 {
+			 "caption": "Run Cmd",
+			 "id": "runcmd",
+			 "command": "runcmd"
+			 },
+			 {
+			 "caption": "Exec This File",
+			 "id": "execfile",
+			 "command": "execfile"
+			 }
+		 ]
+	 }
+	 
+]

@@ -1,0 +1,10 @@
+[
+	 {
+	 "keys": ["ctrl+alt++shift+c"],
+	 "command": "runcmd"
+	 },
+	 {
+	 "keys": ["ctrl+alt++shift+r"],
+	 "command": "execfile"
+	 }
+]
