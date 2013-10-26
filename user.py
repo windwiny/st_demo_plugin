@@ -20,9 +20,11 @@ class RuncmdCommand(sublime_plugin.TextCommand):
 class ExecfileCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		fn = sublime.active_window().active_view().file_name()
+		di = os.path.dirname(fn)
+		dr = di[0:2]
 		_, ext = os.path.splitext(fn)
 		if ext == '.py':
-			subprocess.Popen(r'cmd /k e:\ux\python27\python  "%s" && echo. && pause && exit' % fn)
+			subprocess.Popen(r'cmd /k cd %s && %s && e:\ux\python27\python  "%s" && echo. && pause && exit' % (di,dr,fn))
 		elif ext == '.rb':
-			subprocess.Popen(r'cmd /k e:\ux\ruby2\bin\ruby   "%s" && echo. && pause && exit' % fn)
+			subprocess.Popen(r'cmd /k cd %s && %s && e:\ux\ruby2\bin\ruby   "%s" && echo. && pause && exit' % (di,dr,fn))
 
